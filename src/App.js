@@ -1,15 +1,17 @@
 import React from "react";
-import profileImage from "./img/my-img.jpg";
-import "./App.css";
+import Post from "./posts/post";
+
+const post = {
+  date: new Date(),
+  text: `Today was a good day to try to surf`,
+  author: {
+    name: "Mariia Mytsko",
+    nickname: "@Mariia_Myt",
+  },
+};
 
 function App() {
-  return (
-    <div className="App">
-      <h1>My react app</h1>
-      <h2>Author: Mariia Mytsko</h2>
-      <img src={profileImage} alt="profile-image" />
-    </div>
-  );
+  return <Post date={post.date} text={post.text} author={post.author} />;
 }
 
 export default App;
